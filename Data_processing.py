@@ -187,3 +187,11 @@ helpfulness_values = [df_help['Noun']['mean'],df_help['Adjective']['mean'],df_he
                       df_help['sim_descinfo']['mean'],df_help['sim_desc']['mean'],
                       df_help['sim_prod_desc_info']['mean']]
 
+# Calculate Binary Features
+df_binary_features = pd.DataFrame(extract_helpfulness_features(df_features))
+df_binary_features.columns = ['Noun_b','Adjective_b','Verb_b','text_length_b','text_set_length_b','difficult_words_b',
+                  'wrong_words_b','one_letter_b', 'two_letters_b', 'more_letters_b',
+                           'entropy_b','Lex_diversity_b','sim_descinfo_b','sim_desc_b', 'sim_prod_desc_b']
+
+df_binary_features["Total_helpfulness_score"] = df_binary_features.sum(axis=1)
+df['Helpfulness'] = df_binary_features["Total_helpfulness_score"]
