@@ -244,3 +244,18 @@ def rating(x):
     except:
         star = 0.0
     return star 
+
+def extract_helpfulness_features(x):
+    colnames = x.columns
+    num_col = len(colnames)
+    binary_df = []
+    
+    for i in range(num_col):
+        col = colnames[i]
+        #print(col)
+        val_index = helpfulness_variables.index(col)
+        val = helpfulness_values[val_index]
+        #calculate_help =  np.vectorize(fun_help)(x.loc[:][col],val_index)
+        binary_df.append((x.loc[:][col].apply(lambda x: 1 if x > val else 0)))
+
+    return map(list, zip(*binary_df))
