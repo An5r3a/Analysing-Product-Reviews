@@ -11,7 +11,7 @@ A detailed description of each feature is provided in the Table below.
 | -------- | --------------------------------------------------------------------------------------------------- |
 | Noun     | Number of nouns in the review text |
 | Adjective | Number of adjectives in the review text |
-| VerB | Number of verbs in the review text |
+| Verb | Number of verbs in the review text |
 | Flesch_reading_ease | The Flesch Reading Ease Score. The following scale is helpful in assessing the ease of readability in a document: 90-100: Very Easy, 80-89: Easy, 70-79: Fairly Easy, 60-69: Standard, 50-59: Fairly Difficult, 30-49: Difficult, 0-29: Very Confusing |
 | Dale_chall_RE | The DaleChall readability formula is a readability test that provides a numeric gauge of the comprehension difficulty that readers encounter when reading a text. It uses a list of 3000 words that groups of fourth-grade American students could reliably understand, considering any word not on that list to be difficult |
 | Difficult_words | Difficult words do not belong to the list of 3000 familiar words |
